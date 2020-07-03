@@ -62,7 +62,7 @@ You can have a look at the
 
 RAK4631 is the core board of Wisblock, because the MCU stay on this board.
 
-![image-20200702164625941](assets/image-20200630171353822.png)
+<img src="assets/image-20200630171353822.png" alt="image-20200702164625941" style="zoom:50%;" />
 
 
 
@@ -280,7 +280,7 @@ https://www.arduino.cc/en/Main/Software
 
 You can see the current version of Arduino IDE is V1.8.13, and there are several versions for Windows, Linux, and Mac OS X.
 
-![Arduino IDE download](assets\Arduino IDE download.PNG)
+![image-20200703115901208](assets/image-20200703115901208.png)
 
 Just download the correct version of Arduino IDE from here.
 
@@ -290,23 +290,23 @@ Just download the correct version of Arduino IDE from here.
 
 Now, let's install the Arduino IDE, which you just download, on a Windows PC.
 
-![Arduino IDE install windows 1](assets\Arduino IDE install windows 1.PNG)
+![image-20200703115937421](assets/image-20200703115937421.png)
 
 "I Agree"
 
-![Arduino IDE install windows 2](assets\Arduino IDE install windows 2.PNG)
+![image-20200703115958670](assets/image-20200703115958670.png)
 
 "Next"
 
-![Arduino IDE install windows 3](assets\Arduino IDE install windows 3.PNG)
+![image-20200703120015822](assets/image-20200703120015822.png)
 
 "Install"
 
-![Arduino IDE install windows 4](assets\Arduino IDE install windows 4.PNG)
+![image-20200703120034198](assets/image-20200703120034198.png)
 
 After 100% progress, Arduino IDE has been installed successfully.
 
-![Arduino IDE install windows 5 final](assets\Arduino IDE install windows 5 final.PNG)
+![image-20200703120054258](assets/image-20200703120054258.png)
 
 
 
@@ -324,7 +324,7 @@ In Mac OS X, it is almost same with Linux, there is no install process actually,
 
 ### 4.4 Open Arduino IDE
 
-![Arduino IDE introduction](assets\Arduino IDE introduction-1593670122043.png)
+![image-20200703120123062](assets/image-20200703120123062.png)
 
 As you see, Arduino IDE has mainly 5 parts:
 
@@ -336,7 +336,7 @@ You can configure some general parameters such as the serial port, the board inf
 
 You can verify/compile source code, upload the compiled code into Wisblock, open a new Arduino IDE window, open an exist application, or save the current application. 
 
-![Arduino IDE operating buttons](assets\Arduino IDE operating buttons.png)
+![image-20200703120140901](assets/image-20200703120140901.png)
 
 
 
@@ -414,7 +414,7 @@ About customization code, you can have a look at the section 9 for more details.
 
 The compiling process is very easy, what you need to do is just to click the Verify/Compile button on Arduino IDE:
 
-![Arduino IDE operating buttons](assets\Arduino IDE operating buttons.png)
+![image-20200703120229579](assets/image-20200703120229579.png)
 
 Then it will start to compile:
 
@@ -436,7 +436,7 @@ Before uploading, please make sure that your Wisblock hardware has been connecte
 
 Then click the "Upload" button to start it:
 
-![Arduino IDE operating buttons](assets\Arduino IDE operating buttons.png)
+![image-20200703120245093](assets/image-20200703120245093.png)
 
 After uploading successfully, you can see some information as the following image shows in the output message area:
 
