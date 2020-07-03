@@ -396,8 +396,6 @@ RAK has supplied many examples source code on Github for Wisblock:
 
 https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/
 
-**(图片, examples目录)**
-
 ![image-20200703122036065](assets/image-20200703122036065.png)
 
   
@@ -425,8 +423,6 @@ Then it will start to compile:
 ![image-20200702191717737](assets/image-20200702191717737.png)
 
 After compiling successfully, you can see some information in the output message area, and the state is "Done compiling":
-
-**(图片, Arduino IDE compile output information)**
 
 ![image-20200702191352945](assets/image-20200702191352945.png)
 
@@ -458,5 +454,4 @@ As you know, RAK has supplied some examples source code for reference so that yo
 
 All of these tutorials can be found here:
 
-**(Link)**
-
+https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/
