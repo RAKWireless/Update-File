@@ -6,7 +6,7 @@ typora-copy-images-to: assets
 
 [TOC]
 
-
+![image-20200714152453848](assets/image-20200714152453848.png)
 
 ## 1. Introduction
 
@@ -84,7 +84,7 @@ RAK1901 is a Temperature & Humidity sensor board with an I2C interface, which me
 
 More information about RAK1901, please have a look at the following link:
 
-> **(RAK1901 introduction document link)**
+> **(need RAK1901 introduction document link)**
 
 
 
@@ -96,7 +96,7 @@ RAK1902 is a pressure sensor board with an I2C interface, which means it can be 
 
 More information about RAK1902, please have a look at the following link:
 
-> **(RAK1902 introduction document link)**
+> **(need RAK1902 introduction document link)**
 
 
 
@@ -108,7 +108,7 @@ RAK1903 is an optical sensor board with an I2C interface, which means it can be 
 
 More information about RAK1903, please have a look at the following link:
 
-> **(RAK1903 introduction document link)**
+> **(need RAK1903 introduction document link)**
 
 
 
@@ -120,7 +120,7 @@ RAK1904 is a 3-axis acceleration sensor board with an I2C interface, which means
 
 More information about RAK1904, please have a look at the following link:
 
-> **(RAK1904 introduction document link)**
+> **(need RAK1904 introduction document link)**
 
 
 
@@ -132,7 +132,7 @@ RAK1906 is an environment sensor board with I2C interface, which means it can be
 
 More information about RAK1906, please have a look at the following link:
 
-> **(RAK1906 introduction document link)**
+> **(need RAK1906 introduction document link)**
 
 
 
@@ -140,7 +140,7 @@ More information about RAK1906, please have a look at the following link:
 
 RAK1910 is a GPS board with UART interface, which means it can only be connected with RAK5005-O through SLOT A.
 
-<img src="assets\RAK1910-1.PNG" alt="RAK1910-1" style="zoom:50%;" />                                                                                                    <img src=".\assets\RAK1910-2.PNG" alt="RAK1910-2" style="zoom:50%;" /> 
+<img src="assets\RAK1910-1.PNG" alt="RAK1910-1" style="zoom:50%;" />                                                      <img src=".\assets\RAK1910-2.PNG" alt="RAK1910-2" style="zoom:50%;" />  
 
 
 
@@ -148,7 +148,7 @@ RAK1910 is a GPS board with UART interface, which means it can only be connected
 
 More information about RAK1910, please have a look at the following link:
 
-> **(RAK1910 introduction document link)**
+> **(need RAK1910 introduction document link)**
 
 
 
@@ -164,7 +164,7 @@ RAK2305 is a WiFi board which is ESP32 module actually, and it can only be conne
 
 More information about RAK2305, please have a look at the following link:
 
-> **(RAK2305 introduction document link)**
+> **(need RAK2305 introduction document link)**
 
 
 
@@ -180,7 +180,7 @@ RAK5860 is a cellular board which uses Quectel BG77 module actually, and it can 
 
 More information about RAK5860, please have a look at the following link:
 
-> **(RAK5860 introduction document link)**
+> **(need RAK5860 introduction document link)**
 
 
 
@@ -192,7 +192,7 @@ RAK5801 is an IO board which can connect with any 4~20mA sensors. This board can
 
 More information about RAK5801, please have a look at the following link:
 
-> **(RAK5801 introduction document link)**
+> **(need RAK5801 introduction document link)**
 
 
 
@@ -204,7 +204,7 @@ RAK5811 is an IO board which can connect with any 0~5V sensors. This board can o
 
 More information about RAK5811, please have a look at the following link:
 
-> **(RAK5811 introduction document link)**
+> **(need RAK5811 introduction document link)**
 
 
 
@@ -216,7 +216,7 @@ RAK5802 is an IO board which can connect with any RS485 sensors. This board can 
 
 More information about RAK5802, please have a look at the following link:
 
-> **(RAK5802 introduction document link)**
+> **(need RAK5802 introduction document link)**
 
 
 
@@ -228,7 +228,7 @@ RAK1920 is a sensor conversion board which can connect with any Microbus, Grove,
 
 More information about RAK1920, please have a look at the following link:
 
-> **(RAK1920 introduction document link)**
+> **(need RAK1920 introduction document link)**
 
 
 
@@ -240,7 +240,7 @@ RAK5804 is an IO extension board which is used to extent more IO interface, and 
 
 More information about RAK5804, please have a look at the following link:
 
-> **(RAK5804 introduction document link)**
+> **(need RAK5804 introduction document link)**
 
 
 
@@ -248,11 +248,21 @@ More information about RAK5804, please have a look at the following link:
 
 
 
-
-
 ### 3.4 Antennas
 
+BLE antenna:
 
+<img src="assets/image-20200703171652793.png" alt="image-20200703171652793" style="zoom:50%;" />
+
+LoRa antenna:
+
+<img src="assets/image-20200703171725507.png" alt="image-20200703171725507" style="zoom: 33%;" />
+
+GPS antenna:
+
+<img src="assets/image-20200703171833874.png" alt="image-20200703171833874" style="zoom:50%;" />
+
+Just connect them with RAK4631 or RAK1910.
 
 
 
@@ -264,9 +274,41 @@ Please use the battery which RAK suggest, and connect the battery with RAK5005-O
 
 
 
-### 3.6 Enclosure
+Battery specification
+
+| No.  | Items                     | Specifications           |
+| ---- | ------------------------- | ------------------------ |
+| 1    | Charge Cut-off Voltage    | 4.2V                     |
+| 2    | Nominal Voltage           | 3.7V                     |
+| 3    | Discharge Cut-off Voltage | 2.75V                    |
+| 4    | Typical Capacity          | 2650mAh                  |
+| 5    | Max Discharge Current     | 0.5C at 25℃-45℃          |
+| 6    | PH Connector              | 2.0mm pitch              |
+| 7    | Cable Length              | 110.0±3.0mm              |
+| 8    | Cable Color               | Red: VBAT+, Black: VBAT- |
+
+### 3.6 Solar panel
+
+You can connect the solar panel with RAK5005-O as follow:
+
+![image-20200703171106240](assets/image-20200703171106240.png)
 
 
+
+Solar panel specification
+
+| No.  | Items            | specifications                         |
+| ---- | ---------------- | -------------------------------------- |
+| 1    | Nominal  Voltage | 5V                                     |
+| 2    | Typical Current  | 80mA                                   |
+| 3    | Size             | Length: 60mm, Width: 60mm, Height: 2mm |
+| 4    | Connector        | 1.5mm pitch                            |
+| 5    | Cable color      | Red: VCC, Black: GND                   |
+
+### 3.7 Enclosure
+
+> (need enclosure image)
+>
 
 
 
@@ -378,15 +420,58 @@ We use https://github.com/adafruit/Adafruit_nRF52_Arduino and do as below:
 
   ![image-20200702171813125](assets/image-20200702171813125.png)
 
-- Once the BSP is installed, select 'Nordic nRF52840DK(PCA10056)' from Tools -> Board -> Adafruit nRF52 Boards, which will update your system config to use the right compiler and settings for the nRF52840.
+- Download and copy 
 
-  ![image-20200702173222325](assets/image-20200702173222325.png)
+  [WisCore_RAK4631_Boar]: https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/WisCore_RAK4631_Board/
 
-- Replace the pin map in Adafruit library with RAK header. You can download the RAK header file from https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/variants.h , and copy it to the following folder instead of the original header file:
+   folder to the specified path. It maybe like:
 
-  - macOS : `~/Library/Arduino15/packages/adafruit/hardware/nrf52/0.20.1/variants/pca10056/`
-  - Linux : `~/.arduino15/packages/adafruit/hardware/nrf52/0.20.1/variants/pca10056/`
-  - Windows: `%APPDATA%\Local\Arduino15\packages\adafruit\hardware\nrf52\0.20.1\variants\pca10056\`
+  - macOS : `~/Library/Arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
+  - Linux : `~/.arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
+  - Windows: `%APPDATA%\Local\Arduino15\packages\adafruit\hardware\nrf52\0.20.5\variants\`
+
+- Open ./adafruit/hardware/nrf52/0.20.5/boards.txt, and copy the content of the 
+
+  [config.txt]: https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/config.txt
+
+   into the end of boards.txt.
+
+  Then add **menu.region=Region** to the begin of boards.txt (line 21) like
+
+  ```
+  menu.softdevice=Bootloader
+  menu.debug=Debug
+  menu.region=Region
+  ```
+
+- Open ./adafruit/hardware/nrf52/0.20.5/platform.txt.
+
+  Add **-DDEBUG** at the end of line 39 like below:
+
+  ```
+  compiler.cpp.flags=-mcpu={build.mcu} -mthumb -c -g {compiler.warning_flags} {build.float_flags} -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -MMD -DDEBUG
+  ```
+  
+  Add **build.region_flags=-DREGION_EU868** in the end of line 56 like below:
+  
+  ```
+  # this can be overriden in boards.txt 
+  build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float 
+  build.debug_flags=-DCFG_DEBUG=0 
+  build.logger_flags=-DCFG_LOGGER=1 
+  build.sysview_flags=-DCFG_SYSVIEW=0 
+  build.region_flags=-DREGION_EU868
+  ```
+  
+  Add **{build.region_flags}** after **{build.debug_flags}** at line 64 like below:
+  
+  ```
+  build.flags.nrf= -DSOFTDEVICE_PRESENT -DARDUINO_NRF52_ADAFRUIT -DNRF52_SERIES -DLFS_NAME_MAX=64 -Ofast {build.debug_flags} {build.region_flags} {build.logger_flags} {build.sysview_flags} "-
+  ```
+  
+- Restart Arduino IDE, and select "WisCore RAK4631 Board" as follow:
+
+- ![image-20200714154646417](assets/image-20200714154646417.png)
 
   OK, we've configured Arduino IDE correctly and install the BSP successfully!
 
@@ -454,4 +539,4 @@ As you know, RAK has supplied some examples source code for reference so that yo
 
 All of these tutorials can be found here:
 
-https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/
+https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/Tutorials/
