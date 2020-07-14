@@ -17,7 +17,7 @@ Let's get started.
 
 Document List
 
-- [Quick Start Guide]((https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/Quick_Start/))
+- [Quick Start](https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/Quick_Start/)
 - [Bootloader](https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bootloader/)
 - [Examples](https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/)
     - [Communications](https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/communications/)
