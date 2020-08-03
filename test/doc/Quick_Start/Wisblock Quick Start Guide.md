@@ -16,7 +16,7 @@ Wisblock consists of Wisbase board, Wiscore board, and WisIO board.
 
 RAK5005-O is the Wisbase board which can be connected with Wiscore and WisIO through the connector of the board, and provides direct databus interconnection. Wisbase module also integrates the power supply circuit to realize low power battery power supply. In order to facilitate users, Wisbase has reserved USB ports, indicator lights, keys and extended IO interfaces.
 
-RAK4631 is the Wiscore board which consists of nRF52840 and SX1262. It supports LoRa and BLE functions, and supply a rich resource MCU so that you can program it if you want.
+RAK4631 is the Wiscore board which consists of nRF52840 and SX1262. It supports LoRa® and BLE functions, and supply a rich resource MCU so that you can program it if you want.
 
 Wisblock is not only functional testability product in product development verification stage, but also industrial products oriented to mass production. It uses a high-speed connector to ensure the integrity of the signal. At the same time, it is equipped with fastening screw, which can be used in vibration environment. And Wisblock can be used reliably in various civil and industrial scenarios through rigorous reliability tests.
 
@@ -68,7 +68,7 @@ RAK4631 is the core board of Wisblock, because the MCU stay on this board.
 
 ![image-20200702164625941](assets/image-20200702164625941.png)
 
-RAK4631 consists of a nRF52840 MCU and a SX1262 LoRa chip mainly. The final Arduino  code will be uploaded into nRF52840 actually. This core board supports BLE and LoRa features. You can connect it with RAK5005-O base board with slot, and program it through the USB interface on RAK5005-O through Arduino IDE.
+RAK4631 consists of a nRF52840 MCU and a SX1262 LoRa® chip mainly. The final Arduino  code will be uploaded into nRF52840 actually. This core board supports BLE and LoRa® features. You can connect it with RAK5005-O base board with slot, and program it through the USB interface on RAK5005-O through Arduino IDE.
 
 ![RAK5005 connect RAK4631](assets\RAK5005 connect RAK4631.PNG)
 
@@ -254,7 +254,7 @@ BLE antenna:
 
 <img src="assets/image-20200703171652793.png" alt="image-20200703171652793" style="zoom:50%;" />
 
-LoRa antenna:
+LoRa® antenna:
 
 <img src="assets/image-20200703171725507.png" alt="image-20200703171725507" style="zoom: 33%;" />
 
@@ -420,21 +420,20 @@ We use https://github.com/adafruit/Adafruit_nRF52_Arduino and do as below:
 
   ![image-20200702171813125](assets/image-20200702171813125.png)
 
-- Download and copy 
+- Download and copy the following folder to the specified path:
 
-  [WisCore_RAK4631_Boar]: https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/WisCore_RAK4631_Board/
+	https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/WisCore_RAK4631_Board/
 
-   folder to the specified path. It maybe like:
+ 	The path maybe like:
 
-  - macOS : `~/Library/Arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
-  - Linux : `~/.arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
-  - Windows: `%APPDATA%\Local\Arduino15\packages\adafruit\hardware\nrf52\0.20.5\variants\`
+	  - macOS : `~/Library/Arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
+	  - Linux : `~/.arduino15/packages/adafruit/hardware/nrf52/0.20.5/variants/`
+	  - Windows: `%APPDATA%\Local\Arduino15\packages\adafruit\hardware\nrf52\0.20.5\variants\`
 
-- Open ./adafruit/hardware/nrf52/0.20.5/boards.txt, and copy the content of the 
 
-  [config.txt]: https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/config.txt
+- Open ./adafruit/hardware/nrf52/0.20.5/boards.txt, and copy the content of the following file into the end of boards.txt:
 
-   into the end of boards.txt.
+  	https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/bsp/config.txt
 
   Then add **menu.region=Region** to the begin of boards.txt (line 21) like
 
@@ -469,11 +468,33 @@ We use https://github.com/adafruit/Adafruit_nRF52_Arduino and do as below:
   build.flags.nrf= -DSOFTDEVICE_PRESENT -DARDUINO_NRF52_ADAFRUIT -DNRF52_SERIES -DLFS_NAME_MAX=64 -Ofast {build.debug_flags} {build.region_flags} {build.logger_flags} {build.sysview_flags} "-
   ```
   
+  Add **compiler.libraries.ldflags=** in the end of line 76 like below:
+  
+  ```
+  # These can be overridden in platform.local.txt
+  compiler.c.extra_flags=
+  compiler.c.elf.extra_flags=
+  compiler.cpp.extra_flags=
+  compiler.S.extra_flags=
+  compiler.ar.extra_flags=
+  compiler.elf2bin.extra_flags=
+  compiler.elf2hex.extra_flags=
+  compiler.libraries.ldflags=
+  ```
+  
+  Add **{compiler.libraries.ldflags}** before **-Wl,--end-group** at line 95 like below:
+  
+  ```
+  recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  "-L{build.path}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} "-L{build.core.path}/linker" "-T{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" {compiler.ldflags} -o "{build.path}/{build.project_name}.elf" {object_files} -Wl,--start-group -lm "{build.path}/{archive_file}" {compiler.libraries.ldflags} -Wl,--end-group
+  ```
+  
+  
+  
 - Restart Arduino IDE, and select "WisCore RAK4631 Board" as follow:
 
-- ![image-20200714154646417](assets/image-20200714154646417.png)
+![image-20200714154646417](assets/image-20200714154646417.png)
 
-  OK, we've configured Arduino IDE correctly and install the BSP successfully!
+OK, we've configured Arduino IDE correctly and install the BSP successfully!
 
 ## 6. Load Examples
 
@@ -483,7 +504,7 @@ https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/
 
 ![image-20200703122036065](assets/image-20200703122036065.png)
 
-  
+  	
 
 ![image-20200703122058277](assets/image-20200703122058277.png)![image-20200703122125471](assets/image-20200703122125471.png) ![image-20200703122250989](assets/image-20200703122250989.png)
 
@@ -540,3 +561,91 @@ As you know, RAK has supplied some examples source code for reference so that yo
 All of these tutorials can be found here:
 
 https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/Tutorials/
+
+
+
+## Appendix 1: PlatformIO
+
+This appendix will show how to play Wisblock by using PlatformIO instead of Arduino IDE if you want.
+
+First of all, install VS code which is a great and open source tool, and you can download it here:
+
+https://code.visualstudio.com/
+
+After installing VS code, you can search PlatformIO and install it in the Extensions item:
+
+![image-20200722100737565](assets/image-20200722100737565.png)
+
+
+
+After installing PlatformIO, you can see the PlatformIO icon and open it as follow:
+
+![image-20200722101053523](assets/image-20200722101053523.png)
+
+Open "Platforms" in PlatformIO and search "Nordic" as follow:
+
+![image-20200722102908384](assets/image-20200722102908384.png)
+
+You can see there are several items, just click "Nordic nRF52" item and "Install" it as follow:
+
+![image-20200722103130747](assets/image-20200722103130747.png)
+
+![image-20200722103232366](assets/image-20200722103232366.png)
+
+Download the PlatformIO forlder from:
+
+https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/PlatformIO/
+
+Copy wiscore_rak4631.json to the platforms folder.
+
+The path maybe like: 
+
+ - Windows: %USER%\.platformio\platforms\nordicnrf52\boards
+
+Then, create a new project in PlatformIO:
+
+![image-20200722104754712](assets/image-20200722104754712.png)
+
+Choose "WisCore RAK4631 Board (RAKwireless)" for "Board" item, and choss "Arduino" for "Framework" item as follow:
+
+![image-20200722104925274](assets/image-20200722104925274.png)
+
+After creating successfully, you can see the project:
+
+![image-20200722105421895](assets/image-20200722105421895.png)
+
+Now, Copy the complete folder WisCore_RAK4631_Board of PlatformIO folder which you just downloaded to the packages folder. The path maybe like:
+ - Windows: %USER%\.platformio\packages\framework-arduinoadafruitnrf52\variants
+
+Finally, restart the PlatformIO.
+
+OK, you've install and configure PlatformIO for Wisblock successfully.
+
+
+
+Now, let's try to compile an example of Wisblock using PlatformIO. We use the LoRaWAN® OTAA example in this document:
+
+https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/communications/LoRa/LoRaWAN/LoRaWAN_OTAA/
+
+Just copy the source code of the .ino file into the main.cpp of the PlatformIO project we just created:
+
+![image-20200722111241582](assets/image-20200722111241582.png)
+
+Then we need to install the LoRaWAN® library "SX126x-Arduino" in PlatformIO firstly because this example is built based on this library. Just search "SX126x" in "Libraries" item of PlatformIO, and you can see "SX126x-Arduino" as follow:
+
+![image-20200722112932981](assets/image-20200722112932981.png)
+
+Just click it and "Install" this library as follow:
+
+![image-20200722113100736](assets/image-20200722113100736.png)
+
+Then compile it by click the compiling icon at the bottom tool bar as follow:
+
+![image-20200722113244435](assets/image-20200722113244435.png) 
+
+![image-20200722113305159](assets/image-20200722113305159.png)
+
+Great! We've compiled this example successfully!
+
+As same as Arduino IDE, there is an upload icon on the right of compiling icon which can be used to upload the compiled firmware into your device.
+
