@@ -80,7 +80,7 @@ RAK4631 consists of a nRF52840 MCU and a SX1262 LoRa® chip mainly. The final Ar
 
 RAK1901 is a Temperature & Humidity sensor board with an I2C interface, which means it can be connected with RAK5005-O through the I2C slot (SLOT A/B/C/D).
 
-<img src="assets\image-20200702110638518.png" alt="image-20200702110638518" style="zoom: 50%;" />
+<img src="assets/image-20200702110638518.png" alt="image-20200630170056520" style="zoom:50%;" />                                         <img src="assets/image-20200807184458951.png" alt="image-20200807184458951" style="zoom:50%;" />
 
 More information about RAK1901, please have a look at the following link:
 
@@ -92,7 +92,7 @@ More information about RAK1901, please have a look at the following link:
 
 RAK1902 is a pressure sensor board with an I2C interface, which means it can be connected with RAK5005-O through the I2C slot (SLOT A/B/C/D).
 
-<img src="assets\RAK1902.PNG" alt="RAK1902" style="zoom:50%;" />
+<img src="assets/RAK1902.PNG" alt="image-20200630170056520" style="zoom:50%;" />                                             <img src="assets/image-20200807184635631.png" alt="image-20200807184635631" style="zoom:50%;" />
 
 More information about RAK1902, please have a look at the following link:
 
@@ -104,7 +104,7 @@ More information about RAK1902, please have a look at the following link:
 
 RAK1903 is an optical sensor board with an I2C interface, which means it can be connected with RAK5005-O through the I2C slot (SLOT A/B/C/D).
 
-<img src="assets\RAK1903.PNG" alt="RAK1903" style="zoom:50%;" />
+<img src="assets/RAK1903.PNG" alt="image-20200630170056520" style="zoom:50%;" />                            <img src="assets/image-20200807184755876.png" alt="image-20200807184755876" style="zoom:50%;" />
 
 More information about RAK1903, please have a look at the following link:
 
@@ -116,7 +116,7 @@ More information about RAK1903, please have a look at the following link:
 
 RAK1904 is a 3-axis acceleration sensor board with an I2C interface, which means it can be connected with RAK5005-O through the I2C slot (SLOT A/B/C/D).
 
-<img src="assets\RAK1904.PNG" alt="RAK1904" style="zoom:50%;" />
+<img src="assets/RAK1904.PNG" alt="image-20200630170056520" style="zoom:50%;" />                             <img src="assets/image-20200807184841974.png" alt="image-20200807184841974" style="zoom:50%;" />
 
 More information about RAK1904, please have a look at the following link:
 
@@ -128,7 +128,7 @@ More information about RAK1904, please have a look at the following link:
 
 RAK1906 is an environment sensor board with I2C interface, which means it can be connected with RAK5005-O through the I2C slot (SLOT A/B/C/D).
 
-<img src="assets\RAK1906.PNG" alt="RAK1906" style="zoom:50%;" />
+<img src="assets/RAK1906.PNG" alt="image-20200630170056520" style="zoom:50%;" />                                   <img src="assets/image-20200807184924933.png" alt="image-20200807184924933" style="zoom:50%;" />
 
 More information about RAK1906, please have a look at the following link:
 
@@ -506,7 +506,7 @@ https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/
 
   	
 
-![image-20200703122058277](assets/image-20200703122058277.png)![image-20200703122125471](assets/image-20200703122125471.png) ![image-20200703122250989](assets/image-20200703122250989.png)
+![image-20200703122058277](assets/image-20200703122058277.png)![image-20200807181319299](assets/image-20200807181319299.png) ![image-20200807181351685](assets/image-20200807181351685.png)
 
 You can use Wisblock directly or make their customized code according to these examples source code. What you need to do is just to load one of these examples into Arduino IDE by opening a .ino file in RAK examples, in this document, we use "ble_proximity_sensing.ino":
 
@@ -558,9 +558,9 @@ Now, enjoy you Wisblock and have an amazing play time!
 
 As you know, RAK has supplied some examples source code for reference so that you can learn some code level method about how to do an application for Wisblock. Meanwhile, RAK has supplied a set of tutorials too, which has introduced the ability of Wisblock software and shown the development process of these RAK examples so that you can understand better about how to do some customized code.
 
-All of these tutorials can be found here:
+All of these tutorials can be found in every example folder:
 
-https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/doc/Tutorials/
+https://bitbucket.org/Fomi-RAK/wisblock-rak4630-development/src/master/examples/
 
 
 
